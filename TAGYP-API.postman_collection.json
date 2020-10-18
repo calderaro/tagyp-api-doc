@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "8483414e-3e75-47b7-9a50-78f79d2279fd",
+		"name": "TAGYP-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Subscriptions List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ifDUcKkXBikUMkhd4CMs+6cc4e88b-4874-4850-923e-6d7670fc0934",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/v1/subscriptions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"subscriptions"
+					]
+				},
+				"description": "Requires Authorizations bearer + token\n\nReturns a list of subscriptions"
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriptions Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ifDUcKkXBikUMkhd4CMs+6cc4e88b-4874-4850-923e-6d7670fc0934",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reference\": \"12091k209e121\",\n    \"startDate\": \"2020-12-13\",\n    \"endDate\": \"2022-12-13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/subscriptions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"subscriptions"
+					]
+				},
+				"description": "Requires Authorizations bearer + token\n\nReceives via json body: \n{\n    \"reference\": \"12091k209e121\",\n    \"startDate\": \"2020-12-13\",\n    \"endDate\": \"2022-12-13\"\n}\n\nReturns the created subscription object with code"
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriptions Show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ifDUcKkXBikUMkhd4CMs+6cc4e88b-4874-4850-923e-6d7670fc0934",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/v1/subscriptions/24810YkWMMuxYlqTY04x",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"subscriptions",
+						"24810YkWMMuxYlqTY04x"
+					]
+				},
+				"description": "Requires Authorizations bearer + token\n\nReceives subscription's id via url params\n\nReturns a subscription"
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriptions Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ifDUcKkXBikUMkhd4CMs+6cc4e88b-4874-4850-923e-6d7670fc0934",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/v1/subscriptions/24810YkWMMuxYlqTY04x",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"subscriptions",
+						"24810YkWMMuxYlqTY04x"
+					]
+				},
+				"description": "Requires Authorizations bearer + token\n\nReceives subscription's id via url params\n\nReturns a success message"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
