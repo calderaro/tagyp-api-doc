@@ -1,13 +1,10 @@
 # TAGYP API V1 - CURL EXAMPLES
 
-
 All endpoints require Authorization header:
 
 ```
 'Authorization: bearer <TOKEN>'
 ```
-
-
 
 #### Subscriptions Create:
 
@@ -22,7 +19,6 @@ curl --location --request POST 'https://tagyp-node-zftoosm2vq-ew.a.run.app/v1/su
 }'
 ```
 
-
 #### Subscriptions Show:
 
 ```
@@ -30,14 +26,12 @@ curl --location --request GET 'https://tagyp-node-zftoosm2vq-ew.a.run.app/v1/sub
 --header 'Authorization: bearer <TOKEN>'
 ```
 
-
 #### Subscriptions List:
 
 ```
 curl --location --request GET 'https://tagyp-node-zftoosm2vq-ew.a.run.app/v1/subscriptions' \
 --header 'Authorization: bearer <TOKEN>'
 ```
-
 
 #### Subscriptions Delete:
 
